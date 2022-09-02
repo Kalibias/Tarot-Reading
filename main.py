@@ -97,10 +97,9 @@ def cover_suit(suit):
 
 
 def rerun(int):
-    i = int
-    while i != 0:
+    while int != 0:
         tarot_reading()
-        i = i - 1
+        int = int - 1
 
 
 input = input("How many cards would you like to draw? ")
