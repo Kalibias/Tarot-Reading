@@ -56,8 +56,8 @@ def tarot_reading():
         facing = random.choice(card_facing)
 
         # Made to specifically pick the JSON file to read and get the Correct reading.
-        tarotfile = f"Tarot DB/{min_arcana}.json"
-        with open(tarotfile, encoding="UTF-8") as min_tarot:
+
+        with open("Tarot DB/minor_arcana.json", encoding="UTF-8") as min_tarot:
             min_data = json.load(min_tarot)
 
         print("Your card is " + suit + " of " + min_arcana + "\nFacing: " + facing)
@@ -68,7 +68,6 @@ def tarot_reading():
         # Opening the Major Arcana JSON file for reading
         with open("Tarot DB/major_arcana.json", encoding="UTF-8") as maj_tarot:
             maj_data = json.load(maj_tarot)
-
 
         # Randomizing which Major Arcana is picked
         maj_arcana = random.choice(list(maj_dict.keys()))
