@@ -2,10 +2,8 @@
     {
       "Ace": [
         {
-            "key_means": "New ideas, new plans, intellectual ability, victory, success, mental clarity, clear thinking, breakthroughs, ability to concentrate, communication, realising the truth, vision, force, focus, intensity, stimulating people and environments, new beginnings, new projects, justice, assertiveness, authority, making the correct decision "
-        },
-        {
-          "rev_means": "Lack of ideas, intellectual inability, failure, hostility, arguments, insults, destruction, confusion, misinformation, memory loss, inability to concentrate, lack of communication, creative blocks, frustration, injustice, hate triumphing over love,  lack of assertiveness, making the wrong decision, lack of stimulation,"
+            "key_means": "New ideas, new plans, intellectual ability, victory, success, mental clarity, clear thinking, breakthroughs, ability to concentrate, communication, realising the truth, vision, force, focus, intensity, stimulating people and environments, new beginnings, new projects, justice, assertiveness, authority, making the correct decision ",
+            "rev_means": "Lack of ideas, intellectual inability, failure, hostility, arguments, insults, destruction, confusion, misinformation, memory loss, inability to concentrate, lack of communication, creative blocks, frustration, injustice, hate triumphing over love,  lack of assertiveness, making the wrong decision, lack of stimulation,"
         }
     ]
       
@@ -42,7 +40,6 @@
       {
         "Five": [
           {
-            "arcana": "Swords",
             "key_means": "Defeat, surrender, change, walking away, self-sacrifice, self-sabotaging behaviour, underhanded behaviour, deception, lack of communication, aggression, bullying, intimidation, abuse, violence, crime, rape, murder, assault, standing up for yourself, victory, fighting back, overcoming challenges, serious conflict, hostility, stress",
             "rev_means": "Peaceful resolution, moving on, compromise, communication, ending conflict, releasing stress, overcoming challenge, major sacrifice, risk everything, relentless, revenge, escalating violence, held accountable, arrest, uncovered crime, regret, remorse, humiliation, shame, not heeding warnings , surrendering to challenges"
           }
