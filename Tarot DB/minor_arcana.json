@@ -11,15 +11,15 @@
     },
     {
       
-        "Two": [
+      "Two": [
             {
-                "key_means": "Balance, trying to find balance, resourcefulness, ups and downs, adaptability, flexibility, juggling life, juggling money, balancing books, transferring money, profit and loss, income and outgoings, financial decisions, financial stress, partnerships",
-                "rev_means": "Lacking balance, lack of organisation, poor financial decisions, overwhelmed, overextending yourself, biting off more than you can chew, too many balls in the air, financial losses, no contingency plan, financial mess"
+              "key_means": "Balance, trying to find balance, resourcefulness, ups and downs, adaptability, flexibility, juggling life, juggling money, balancing books, transferring money, profit and loss, income and outgoings, financial decisions, financial stress, partnerships",
+              "rev_means": "Lacking balance, lack of organisation, poor financial decisions, overwhelmed, overextending yourself, biting off more than you can chew, too many balls in the air, financial losses, no contingency plan, financial mess"
             }
         ]
     },
     {
-        "Three": [
+      "Three": [
           {
             "key_means": "Apprenticeship, learning, studying, growing, hard work, commitment, building on success, collaboration, teamwork, determination, goals, dedication, quality, attention to detail, tradesperson, achievements, recognition, reward, hard work paying off, effort, motivation",
             "rev_means": "Not learning from mistakes, unwillingness to learn, lack of growth, poor work ethic, lack of commitment, mistakes, lack of effort, lack of teamwork, apathy, no determination, no goals, no dedication, no motivation, poor quality work"
@@ -150,7 +150,6 @@
       
     },
     {
-      
         "Two": [
             {
                 "key_means": "Partnership, unity, love, compatibility, happy couples, potential soulmates, relationships, harmony, balance, equality, attraction, connection, proposals, engagements, marriage, mutual respect ",
@@ -500,7 +499,7 @@
         "Nine": [
           {
             "key_means": "Ongoing battle, battle weary, fatigue, drained of energy, nearly there, close to success, courage, persistence, perseverance, backbone, learning from past failure, gather your strength, fight your corner, last stand, guarded, wounded, expecting trouble, holding out, not working out as planned, setbacks, strength of will",
-  "rev_means": "Refusing to compromise/ give in, stubborn, rigid, obstinate, last one standing, not learning from past, no fight left, chronic fatigue, stalemate, retreat, withdrawal, falling at the final hurdle, lack of courage/ persistence/ perseverance/ backbone, weakness, dropping your guard, unexpected trouble, giving up, chip on shoulder"
+            "rev_means": "Refusing to compromise/ give in, stubborn, rigid, obstinate, last one standing, not learning from past, no fight left, chronic fatigue, stalemate, retreat, withdrawal, falling at the final hurdle, lack of courage/ persistence/ perseverance/ backbone, weakness, dropping your guard, unexpected trouble, giving up, chip on shoulder"
           }
           
       ]
