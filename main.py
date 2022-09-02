@@ -1,6 +1,7 @@
 import random
 import json
 from word2number import w2n
+import textwrap
 
 # Setting up the variables for future uses.
 card_facing = ["Reversed", "Upright"]
@@ -60,7 +61,8 @@ def min_reading():
 
     print("Your card is " + suit + " of " + min_arcana + "\nFacing: " + facing)
     s_key = 'key_means' if facing == "Upright" else 'rev_means'
-    print(min_data[min_arcana][suit_dict[suit]][suit][0][s_key])
+    result = min_data[min_arcana][suit_dict[suit]][suit][0][s_key]
+    print("\n".join(textwrap.wrap(result, 35)))
 
 
 def maj_reading():
@@ -71,10 +73,13 @@ def maj_reading():
     # Randomizing which Major Arcana is picked
     maj_arcana = random.choice(list(maj_dict.keys()))
     facing = random.choice(card_facing)
-
+    # Printing the
     print("Your card is " + maj_arcana + "\n" + facing)
+
+    #
     s_key = 'key_means' if facing == "Upright" else 'rev_means'
-    print(maj_data[int(maj_dict[maj_arcana])][maj_arcana][0][s_key])
+    result = maj_data[int(maj_dict[maj_arcana])][maj_arcana][0][s_key]
+    print("\n".join(textwrap.wrap(result, 35)))
 
 
 def tarot_reading(i_int):
