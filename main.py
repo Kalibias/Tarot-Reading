@@ -1,8 +1,5 @@
 import random
-from random import randint
-import pymongo
 import json
-import chardet
 from word2number import w2n
 
 # Setting up the varibles for future uses.
@@ -19,12 +16,18 @@ min_arcana_id = ["Cups", "Swords", "Pentacles", "Wands"]
 card_facing = ["Reversed", "Upright"]
 
 # Assigning Suits to their number to make Iteration easier.
-min_dict = {
+suit_dict = {
     "Ace": 0,
     "Page": 10,
     "Knight": 11,
     "Queen": 12,
     "King": 13
+}
+maj_dict = {
+    "Pentacles": 0,
+    "Cups": 1,
+    "Swords": 2,
+    "Wands": 3
 }
 maj_dict = {
     "Fool": 0,
@@ -54,7 +57,7 @@ def tarot_reading():
         facing = card_facing[random.randint(0, len(card_facing) - 1)]
 
         # Made to specifically pick the JSON file to read and get the Correct reading.
-        tarotfile = "Tarot DB/" + min_arcana.lower() + ".json"
+        tarotfile = "Tarot DB/" + min_arcana + ".json"
         f = open(tarotfile, encoding="UTF-8")
         min_data = json.load(f)
 
@@ -88,7 +91,7 @@ def tarot_reading():
 # Convert words to numbers using the w2n library
 def cover_suit(suit):
     if suit == "Ace" or suit == "Page" or suit == "Knight" or suit == "Queen" or suit == "King":
-        ans = min_dict[suit]
+        ans = suit_dict[suit]
         return int(ans)
     else:
         # Subtracting one due to placement of cards.
@@ -102,6 +105,6 @@ def rerun(int):
         int = int - 1
 
 
-response = response("How many cards would you like to draw? ")
+response = input("How many cards would you like to draw? ")
 num = w2n.word_to_num(response)
 rerun(num)
