@@ -2,28 +2,27 @@ import random
 import json
 from word2number import w2n
 
-# Setting up the varibles for future uses.
-maj_arcana_id = ['Fool', 'Magician', 'High Priestess', 'Empress', 'Emperor', 'Hierophant', 'Lovers',
-                 'Chariot', 'Strength', 'Hermit', 'Wheel of Fortune', 'Justice', 'Hanged Man', 'Death'
-                 ]
-
-suit_title = ["Ace", "Two", "Three",
-              "Four", "Five", "Six",
-              "Seven", "Eight", "Nine", "Ten",
-              "Page", "Knight", "Queen", "King"]
-
-min_arcana_id = ["Cups", "Swords", "Pentacles", "Wands"]
+# Setting up the variables for future uses.
 card_facing = ["Reversed", "Upright"]
 
 # Assigning Suits to their number to make Iteration easier.
 suit_dict = {
     "Ace": 0,
+    "Two": 1,
+    "Three": 2,
+    "Four": 3,
+    "Five": 4,
+    "Six": 5,
+    "Seven": 6,
+    "Eight": 7,
+    "Nine": 8,
+    "Ten": 9,
     "Page": 10,
     "Knight": 11,
     "Queen": 12,
     "King": 13
 }
-maj_dict = {
+min_dict = {
     "Pentacles": 0,
     "Cups": 1,
     "Swords": 2,
@@ -52,34 +51,27 @@ def tarot_reading():
     num = random.randint(0, 1)
     if num == 0:
         # Randomize which suit, arcana and layout is selected.
-        suit = suit_title[random.randint(0, len(suit_title) - 1)]
-        min_arcana = min_arcana_id[random.randint(0, len(min_arcana_id) - 1)]
-        facing = card_facing[random.randint(0, len(card_facing) - 1)]
+        suit = random.choice(list(suit_dict.keys()))
+        min_arcana = random.choice(list(min_dict.keys()))
+        facing = random.choice(card_facing)
 
         # Made to specifically pick the JSON file to read and get the Correct reading.
-        tarotfile = "Tarot DB/" + min_arcana + ".json"
+        tarotfile = f"Tarot DB/{min_arcana}.json"
         f = open(tarotfile, encoding="UTF-8")
         min_data = json.load(f)
 
         print("Your card is " + suit + " of " + min_arcana + "\nFacing: " + facing)
-        if facing == "Upright":
-            # Data > Picks the Minor Arcana  > Array placement of suit > Suit itself >
-            # placement of meanings > meanings themself
-            print(min_data[str(min_arcana)][cover_suit(suit)][suit][0]['key_means'])
-            f.close()
-
-        else:
-            print(min_data[str(min_arcana)][cover_suit(suit)][suit][0]['rev_means'])
-            f.close()
-
+        s_key = 'key_means' if facing == "Upright" else 'rev_means'
+        print(min_data[str(min_arcana)][cover_suit(suit)][suit][0][s_key])
+        f.close()
     else:
         # Opening the Major Arcana JSON file for reading
         f = open("Tarot DB/major_arcana.json", encoding="UTF-8")
         maj_data = json.load(f)
 
         # Randomizing which Major Arcana is picked
-        maj_arcana = maj_arcana_id[random.randint(0, len(maj_arcana_id) - 1)]
-        facing = card_facing[random.randint(0, len(card_facing) - 1)]
+        maj_arcana = random.choice(list(maj_dict.keys()))
+        facing = random.choice(card_facing)
 
         print("Your card is " + maj_arcana + "\n" + facing)
         if facing == "Upright":
@@ -90,21 +82,20 @@ def tarot_reading():
 
 # Convert words to numbers using the w2n library
 def cover_suit(suit):
-    if suit == "Ace" or suit == "Page" or suit == "Knight" or suit == "Queen" or suit == "King":
-        ans = suit_dict[suit]
-        return int(ans)
+    if suit in ("Ace", "Page", "Knight", "Queen", "King"):
+        return int(suit_dict[suit])
     else:
         # Subtracting one due to placement of cards.
         ans = w2n.word_to_num(suit) - 1
         return int(ans);
 
 
-def rerun(int):
-    while int != 0:
+def rerun(i_int):
+    while i_int != 0:
         tarot_reading()
-        int = int - 1
+        i_int -= 1
 
 
 response = input("How many cards would you like to draw? ")
-num = w2n.word_to_num(response)
-rerun(num)
+amount = w2n.word_to_num(response)
+rerun(amount)
