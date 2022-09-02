@@ -102,6 +102,6 @@ def rerun(int):
         int = int - 1
 
 
-input = input("How many cards would you like to draw? ")
-num = w2n.word_to_num(input)
+response = response("How many cards would you like to draw? ")
+num = w2n.word_to_num(response)
 rerun(num)
