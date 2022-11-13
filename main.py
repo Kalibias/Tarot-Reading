@@ -77,7 +77,7 @@ def maj_reading():
     # Printing the
     first = f"Your card is {maj_arcana} \n{facing}"
 
-    #
+    # Grabbing the data drawn and translating to grab specific data in the JSON file.
     s_key = 'key_means' if facing == "Upright" else 'rev_means'
     result = maj_data[int(maj_dict[maj_arcana])][maj_arcana][0][s_key]
     second = "\n".join(textwrap.wrap(result, 35))
