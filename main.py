@@ -1,6 +1,5 @@
 import random
 import json
-from word2number import w2n
 import textwrap
 
 # Setting up the variables for future uses.
