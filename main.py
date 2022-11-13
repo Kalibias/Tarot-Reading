@@ -84,13 +84,13 @@ def maj_reading():
     return first + "\n" + second
 
 
-def tarot_reading(i_int):
-    while i_int != 0:
+def tarot_reading(num):
+    while num < 0:
         tarot = [min_reading, maj_reading]
         print(random.choice(tarot)())
-        i_int -= 1
+        num -= 1
 
 
-response = input("How many cards would you like to draw? ")
-amount = w2n.word_to_num(response)
-tarot_reading(amount)
+response = int(input("How many cards would you like to draw? "))
+
+tarot_reading(response)
