@@ -59,11 +59,11 @@ def min_reading():
     with open("Tarot DB/minor_arcana.json", encoding="UTF-8") as min_tarot:
         min_data = json.load(min_tarot)
 
-    first = "Your card is " + suit + " of " + min_arcana + "\nFacing: " + facing
+    first = f"Your card is {suit} of { min_arcana } \nFacing: { facing }"
     s_key = 'key_means' if facing == "Upright" else 'rev_means'
     result = min_data[min_arcana][suit_dict[suit]][suit][0][s_key]
-    second = "\n".join(textwrap.wrap(result, 35))
-    return first + "\n" + second
+    second = "\n".join(textwrap.wrap(result, 40))
+    return f"{first}\n {second} \n"
 
 
 def maj_reading():
@@ -75,13 +75,13 @@ def maj_reading():
     maj_arcana = random.choice(list(maj_dict.keys()))
     facing = random.choice(card_facing)
     # Printing the
-    first = "Your card is " + maj_arcana + "\n" + facing
+    first = f"Your card is {maj_arcana} \n{facing}"
 
     #
     s_key = 'key_means' if facing == "Upright" else 'rev_means'
     result = maj_data[int(maj_dict[maj_arcana])][maj_arcana][0][s_key]
     second = "\n".join(textwrap.wrap(result, 35))
-    return first + "\n" + second
+    return f"{first}\n {second} \n"
 
 
 def tarot_reading(num):
