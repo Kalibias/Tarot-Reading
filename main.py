@@ -2,6 +2,7 @@ import json, random
 
 
 def tarot_pull():
+    love, career, money = False, False, False
     arcana = random.choice(("Major", "Minor"))
     facing = random.choice(("Upright", "Reversed"))
     side = 'reg' if facing == "Upright" else "rev"
@@ -10,6 +11,15 @@ def tarot_pull():
     if arcana == "Major":
         arc = random.choice(list(tarot["Major"].keys()))
         card = f"Your card is {facing} {arc} "
+
+        if love == True:
+            result = tarot["Major"][arc]["love"]
+        if career == True:
+            result = tarot["Major"][arc]["career"]
+        if money == True:
+            result = tarot["Major"][arc]["money"]
+
+
         result = tarot["Major"][arc][side]
 
     if arcana == "Minor":
